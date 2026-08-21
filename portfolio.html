@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portfolio — Lumière Studio</title>
 <meta name="description" content="Selected wedding, fashion, portrait, commercial and event photography from Lumière Studio.">
-<meta name="theme-color" content="#08080a">
+<meta name="theme-color" content="#EDEDEB">
 <meta property="og:title" content="Portfolio — Lumière Studio">
 <meta property="og:description" content="Selected wedding, fashion, portrait, commercial and event photography from Lumière Studio.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/images/hero/hero-golden-hour-vows-1400.webp">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/CormorantGaramond-300-latin.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/Inter-300-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/syne-latin-800-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk-latin-400-normal.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body data-page="portfolio">
@@ -24,7 +24,7 @@
       <span class="brand__sub">Photography Studio</span>
     </a>
     <nav class="nav" aria-label="Primary"><a href="index.html">Home</a><a href="portfolio.html" aria-current="page">Portfolio</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html">Studio</a><a href="contact.html">Contact</a></nav>
-    <a class="btn btn--gold header-cta" href="contact.html">Book a Session</a>
+    <a class="btn header-cta" href="contact.html">Book a Session</a>
     <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav"><span></span></button>
   </div>
 </header>
@@ -33,235 +33,280 @@
   <div class="meta">hello@lumierestudio.example · +1 000 000 0000</div>
 </nav>
 <main id="main">
-<section class="page-hero">
-  <img src="assets/images/hero/hero-editorial-street-1400.webp" srcset="assets/images/hero/hero-editorial-street-900.webp 900w, assets/images/hero/hero-editorial-street-1400.webp 1400w" sizes="100vw" width="1400" height="787" alt="Fashion editorial: model in a burgundy coat with shopping bags" loading="eager" fetchpriority="high" decoding="sync">
-  <div class="page-hero__scrim"></div>
-  <div class="wrap page-hero__in">
+<section class="masthead">
+  <div class="wrap masthead__grid">
+    <div class="masthead__text">
     <p class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Portfolio</p>
     <p class="eyebrow">Selected work</p>
     <h1 class="h1">Twenty-seven commissions,<br><span class="italic">five disciplines.</span></h1>
     <p class="lead" style="margin-top:1.2rem">Click any frame to open it full size. Filter by discipline, or scroll — the order is roughly how we would show it in the studio.</p>
+    </div>
+    <figure class="frame masthead__frame rv">
+      <span class="frame__n">000</span>
+      <span class="crop"><span class="media"><img src="assets/images/hero/hero-editorial-street-1400.webp" srcset="assets/images/hero/hero-editorial-street-900.webp 900w, assets/images/hero/hero-editorial-street-1400.webp 1400w" sizes="100vw" width="1400" height="787" alt="Fashion editorial: model in a burgundy coat with shopping bags" loading="eager" fetchpriority="high" decoding="sync"></span></span>
+    </figure>
   </div>
 </section>
-<section class="section">
+<section class="section" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="series rv">
+      <a class="series__row" href="#frames" data-series="weddings" id="weddings">
+        <span class="series__n">001</span>
+        <span class="series__name">Weddings</span>
+        <span class="series__y">2024 — 2025</span>
+        <span class="series__c">006 frames</span>
+        <span class="series__peek"><span class="crop"><span class="media"><img src="assets/images/weddings/cover-weddings-1000.webp" srcset="assets/images/weddings/cover-weddings-480.webp 480w, assets/images/weddings/cover-weddings-700.webp 700w, assets/images/weddings/cover-weddings-1000.webp 1000w" sizes="(max-width:900px) 92vw, 220px" width="1000" height="1250" alt="Bride and groom on a pebble beach, veil trailing in the wind" loading="lazy" decoding="async"></span></span></span>
+      </a>
+      <a class="series__row" href="#frames" data-series="fashion" id="fashion">
+        <span class="series__n">002</span>
+        <span class="series__name">Fashion</span>
+        <span class="series__y">2024 — 2025</span>
+        <span class="series__c">005 frames</span>
+        <span class="series__peek"><span class="crop"><span class="media"><img src="assets/images/fashion/cover-fashion-1000.webp" srcset="assets/images/fashion/cover-fashion-480.webp 480w, assets/images/fashion/cover-fashion-700.webp 700w, assets/images/fashion/cover-fashion-1000.webp 1000w" sizes="(max-width:900px) 92vw, 220px" width="1000" height="1250" alt="Model in a red tulle gown photographed in desert light" loading="lazy" decoding="async"></span></span></span>
+      </a>
+      <a class="series__row" href="#frames" data-series="portraits" id="portraits">
+        <span class="series__n">003</span>
+        <span class="series__name">Portraits</span>
+        <span class="series__y">2024 — 2025</span>
+        <span class="series__c">006 frames</span>
+        <span class="series__peek"><span class="crop"><span class="media"><img src="assets/images/portraits/cover-portraits-1000.webp" srcset="assets/images/portraits/cover-portraits-480.webp 480w, assets/images/portraits/cover-portraits-700.webp 700w, assets/images/portraits/cover-portraits-1000.webp 1000w" sizes="(max-width:900px) 92vw, 220px" width="1000" height="1250" alt="Low-key studio portrait of a man against a black backdrop" loading="lazy" decoding="async"></span></span></span>
+      </a>
+      <a class="series__row" href="#frames" data-series="commercial" id="commercial">
+        <span class="series__n">004</span>
+        <span class="series__name">Commercial</span>
+        <span class="series__y">2024 — 2025</span>
+        <span class="series__c">005 frames</span>
+        <span class="series__peek"><span class="crop"><span class="media"><img src="assets/images/commercial/cover-commercial-1000.webp" srcset="assets/images/commercial/cover-commercial-480.webp 480w, assets/images/commercial/cover-commercial-700.webp 700w, assets/images/commercial/cover-commercial-1000.webp 1000w" sizes="(max-width:900px) 92vw, 220px" width="1000" height="1250" alt="Green leather brogue styled on a sculptural pedestal" loading="lazy" decoding="async"></span></span></span>
+      </a>
+      <a class="series__row" href="#frames" data-series="events" id="events">
+        <span class="series__n">005</span>
+        <span class="series__name">Events</span>
+        <span class="series__y">2024 — 2025</span>
+        <span class="series__c">005 frames</span>
+        <span class="series__peek"><span class="crop"><span class="media"><img src="assets/images/events/cover-events-700.webp" srcset="assets/images/events/cover-events-480.webp 480w, assets/images/events/cover-events-700.webp 700w" sizes="(max-width:900px) 92vw, 220px" width="700" height="875" alt="Confetti bursting over a crowd under stage lights" loading="lazy" decoding="async"></span></span></span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="section" id="frames">
   <div class="wrap">
     <div class="filters" data-filters><button data-filter="all" class="is-active">All work</button><button data-filter="weddings">Weddings</button><button data-filter="fashion">Fashion</button><button data-filter="portraits">Portraits</button><button data-filter="commercial">Commercial</button><button data-filter="events">Events</button></div>
-    <div class="grid g-3">
-      <a class="work rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/cover-weddings-1000.webp" data-alt="Bride and groom on a pebble beach, veil trailing in the wind" data-caption="Sea Glass — Weddings, Amalfi Coast 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwBACdASoUABkAPt1epU0opaOiMAwBEBuJZwDBkCHgBJZMMNg/OjcDuIw1YnxHR8AA/ucdW6/3C5cFK5Fb8ZCaYAiZuwufA0j7ohfVVViu9N0K2AdUDKlsA6iGjsz86/MKjZCYDThn5OGzW8C9DWUJBt9aWBjo92yGpmAA)"><img src="assets/images/weddings/cover-weddings-1000.webp" srcset="assets/images/weddings/cover-weddings-480.webp 480w, assets/images/weddings/cover-weddings-700.webp 700w, assets/images/weddings/cover-weddings-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Bride and groom on a pebble beach, veil trailing in the wind" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Weddings</span>
-    <span class="work__title">Sea Glass</span>
-    <span class="work__meta">Amalfi Coast · 2025</span>
+    <div class="sheet sheet--4">
+      <a class="frame rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/cover-weddings-1000.webp" data-alt="Bride and groom on a pebble beach, veil trailing in the wind" data-caption="Sea Glass — Weddings, Amalfi Coast 2025">
+  <span class="frame__n">001</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwBACdASoUABkAPt1epU0opaOiMAwBEBuJZwDBkCHgBJZMMNg/OjcDuIw1YnxHR8AA/ucdW6/3C5cFK5Fb8ZCaYAiZuwufA0j7ohfVVViu9N0K2AdUDKlsA6iGjsz86/MKjZCYDThn5OGzW8C9DWUJBt9aWBjo92yGpmAA)"><img src="assets/images/weddings/cover-weddings-1000.webp" srcset="assets/images/weddings/cover-weddings-480.webp 480w, assets/images/weddings/cover-weddings-700.webp 700w, assets/images/weddings/cover-weddings-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Bride and groom on a pebble beach, veil trailing in the wind" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Sea Glass</span>
+    <span class="frame__m">Amalfi Coast · 2025</span>
+    <span class="frame__c">Weddings</span>
   </span>
-</a><a class="work rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/wedding-confetti-exit-1000.webp" data-alt="Couple kissing as guests throw confetti after the ceremony" data-caption="Confetti Exit — Weddings, Provence 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAAAQBQCdASoUABkAPulsrlGpJaQiqAgBIB0JYwC/aoABf7lWUtYePekrJlyQ306RoD7YAP7pmYvIt2DLDjYF2Q7TbOD9ZgdalyPKvWQjxhh2gFE/Bm7b1y9nrwdwpYBdWmjMQnKIVC6NbOl7uANLHaQDiJWNEusGK1zT2V78AVk09+cpTZDqPVip+mfWXRjBpdpQTON0txwTaw9sjYKD4gy4jtY1+irdKytYWfEAAAA=)"><img src="assets/images/weddings/wedding-confetti-exit-1000.webp" srcset="assets/images/weddings/wedding-confetti-exit-480.webp 480w, assets/images/weddings/wedding-confetti-exit-700.webp 700w, assets/images/weddings/wedding-confetti-exit-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Couple kissing as guests throw confetti after the ceremony" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Weddings</span>
-    <span class="work__title">Confetti Exit</span>
-    <span class="work__meta">Provence · 2025</span>
+</a><a class="frame rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/wedding-confetti-exit-1000.webp" data-alt="Couple kissing as guests throw confetti after the ceremony" data-caption="Confetti Exit — Weddings, Provence 2025">
+  <span class="frame__n">002</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAAAQBQCdASoUABkAPulsrlGpJaQiqAgBIB0JYwC/aoABf7lWUtYePekrJlyQ306RoD7YAP7pmYvIt2DLDjYF2Q7TbOD9ZgdalyPKvWQjxhh2gFE/Bm7b1y9nrwdwpYBdWmjMQnKIVC6NbOl7uANLHaQDiJWNEusGK1zT2V78AVk09+cpTZDqPVip+mfWXRjBpdpQTON0txwTaw9sjYKD4gy4jtY1+irdKytYWfEAAAA=)"><img src="assets/images/weddings/wedding-confetti-exit-1000.webp" srcset="assets/images/weddings/wedding-confetti-exit-480.webp 480w, assets/images/weddings/wedding-confetti-exit-700.webp 700w, assets/images/weddings/wedding-confetti-exit-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Couple kissing as guests throw confetti after the ceremony" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Confetti Exit</span>
+    <span class="frame__m">Provence · 2025</span>
+    <span class="frame__c">Weddings</span>
   </span>
-</a><a class="work rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/wedding-lakeside-ceremony-700.webp" data-alt="Newlyweds laughing beside a lake in autumn light" data-caption="Lakeside Vows — Weddings, Lake Como 2024">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAADQBACdASoUABkAPulqrVGpJaQiqAgBIB0JZACdMswBLfJ4cF3dTmlVVjYsS/XjgAD9/SM/feKtUYFjYWgu6Cc6zhhPY1bOwdl2Nu5FppJnasrZOKS9cgSKYYhSyK1Sx5InnyG68o+4KyCXnFngENRzy1yN0oWUcojqZ60oTrvqAxNxTWevcNEQAENS0nkaxWSEIdqJnuDvWOMhlNgAAA==)"><img src="assets/images/weddings/wedding-lakeside-ceremony-700.webp" srcset="assets/images/weddings/wedding-lakeside-ceremony-480.webp 480w, assets/images/weddings/wedding-lakeside-ceremony-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Newlyweds laughing beside a lake in autumn light" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Weddings</span>
-    <span class="work__title">Lakeside Vows</span>
-    <span class="work__meta">Lake Como · 2024</span>
+</a><a class="frame rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/wedding-lakeside-ceremony-700.webp" data-alt="Newlyweds laughing beside a lake in autumn light" data-caption="Lakeside Vows — Weddings, Lake Como 2024">
+  <span class="frame__n">003</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAADQBACdASoUABkAPulqrVGpJaQiqAgBIB0JZACdMswBLfJ4cF3dTmlVVjYsS/XjgAD9/SM/feKtUYFjYWgu6Cc6zhhPY1bOwdl2Nu5FppJnasrZOKS9cgSKYYhSyK1Sx5InnyG68o+4KyCXnFngENRzy1yN0oWUcojqZ60oTrvqAxNxTWevcNEQAENS0nkaxWSEIdqJnuDvWOMhlNgAAA==)"><img src="assets/images/weddings/wedding-lakeside-ceremony-700.webp" srcset="assets/images/weddings/wedding-lakeside-ceremony-480.webp 480w, assets/images/weddings/wedding-lakeside-ceremony-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Newlyweds laughing beside a lake in autumn light" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Lakeside Vows</span>
+    <span class="frame__m">Lake Como · 2024</span>
+    <span class="frame__c">Weddings</span>
   </span>
-</a><a class="work rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/wedding-the-aisle-700.webp" data-alt="Bride and groom walking back down the aisle through applause" data-caption="The Long Walk — Weddings, Auckland 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAACwBQCdASoUABkAPulsr1GpJaQiqAgBIB0JQBdmaI3/y7mSJ+rIRbi3Pq3h3cxXYUyBnQsJsAAA/TwcRyzRhkw3uJ9lMVmnrBQM1W0zL78Q3M2HLCbJembVYx3wtLpBSZgmZ7wN9QsOgEDmgMZvJKn+x486Rvg+hDXop0lnFxHU1VFzte+9ZJ5NnjWtPTiFu6YlT7TjlH7TqSVeLYDt42+RLFIaBgz4l/Lc9sjWSbArpyAA)"><img src="assets/images/weddings/wedding-the-aisle-700.webp" srcset="assets/images/weddings/wedding-the-aisle-480.webp 480w, assets/images/weddings/wedding-the-aisle-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Bride and groom walking back down the aisle through applause" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Weddings</span>
-    <span class="work__title">The Long Walk</span>
-    <span class="work__meta">Auckland · 2025</span>
+</a><a class="frame rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/wedding-the-aisle-700.webp" data-alt="Bride and groom walking back down the aisle through applause" data-caption="The Long Walk — Weddings, Auckland 2025">
+  <span class="frame__n">004</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAACwBQCdASoUABkAPulsr1GpJaQiqAgBIB0JQBdmaI3/y7mSJ+rIRbi3Pq3h3cxXYUyBnQsJsAAA/TwcRyzRhkw3uJ9lMVmnrBQM1W0zL78Q3M2HLCbJembVYx3wtLpBSZgmZ7wN9QsOgEDmgMZvJKn+x486Rvg+hDXop0lnFxHU1VFzte+9ZJ5NnjWtPTiFu6YlT7TjlH7TqSVeLYDt42+RLFIaBgz4l/Lc9sjWSbArpyAA)"><img src="assets/images/weddings/wedding-the-aisle-700.webp" srcset="assets/images/weddings/wedding-the-aisle-480.webp 480w, assets/images/weddings/wedding-the-aisle-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Bride and groom walking back down the aisle through applause" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">The Long Walk</span>
+    <span class="frame__m">Auckland · 2025</span>
+    <span class="frame__c">Weddings</span>
   </span>
-</a><a class="work rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/wedding-veil-and-wheatfield-1000.webp" data-alt="Couple embracing beneath a floating veil in a wheat field" data-caption="Wheatfield — Weddings, Tuscany 2024">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBQCdASoUABkAPulmrk+pJaSiKAqpIB0JQBdg7wAKXxXFIxe9+/6Uq5pygw/pL0Nxaf3s7DgA/tSF/LkhM2X0Sge9nBc76A1KH0s09X66pHu8ZkwgRZR2CUIX6SZ28SISlp1iwV8WBBeN3/abimLKh7EDhDEJcVP/WiK5pqKzbFJcaSH36uEd35UOky4Rr/xLiwRhZ1aAAA==)"><img src="assets/images/weddings/wedding-veil-and-wheatfield-1000.webp" srcset="assets/images/weddings/wedding-veil-and-wheatfield-480.webp 480w, assets/images/weddings/wedding-veil-and-wheatfield-700.webp 700w, assets/images/weddings/wedding-veil-and-wheatfield-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Couple embracing beneath a floating veil in a wheat field" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Weddings</span>
-    <span class="work__title">Wheatfield</span>
-    <span class="work__meta">Tuscany · 2024</span>
+</a><a class="frame rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/wedding-veil-and-wheatfield-1000.webp" data-alt="Couple embracing beneath a floating veil in a wheat field" data-caption="Wheatfield — Weddings, Tuscany 2024">
+  <span class="frame__n">005</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBQCdASoUABkAPulmrk+pJaSiKAqpIB0JQBdg7wAKXxXFIxe9+/6Uq5pygw/pL0Nxaf3s7DgA/tSF/LkhM2X0Sge9nBc76A1KH0s09X66pHu8ZkwgRZR2CUIX6SZ28SISlp1iwV8WBBeN3/abimLKh7EDhDEJcVP/WiK5pqKzbFJcaSH36uEd35UOky4Rr/xLiwRhZ1aAAA==)"><img src="assets/images/weddings/wedding-veil-and-wheatfield-1000.webp" srcset="assets/images/weddings/wedding-veil-and-wheatfield-480.webp 480w, assets/images/weddings/wedding-veil-and-wheatfield-700.webp 700w, assets/images/weddings/wedding-veil-and-wheatfield-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Couple embracing beneath a floating veil in a wheat field" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Wheatfield</span>
+    <span class="frame__m">Tuscany · 2024</span>
+    <span class="frame__c">Weddings</span>
   </span>
-</a><a class="work rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/wedding-rings-and-hands-700.webp" data-alt="Detail of the couple&#x27;s hands and wedding rings over a bouquet" data-caption="Bands — Weddings, New York 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADwBQCdASoUABkAPulgq08pJSOiMBgIASAdCWgArDNnNwkSW3+Ad+34IB9Rc8WlDpzzbFduTfmQAAD+79IBmeXpG0qdZVfAlgcceaataAhQXaKmJvZ79nRr0Y+i5xnnFgAhNrA4sMbqUl7HDUJSdnB0/AIJmdWWWWqfzBLka7IO4PiyN4UECdlD//Q6ZwyODMHHR8yonoDMf8rjaX9awAAA)"><img src="assets/images/weddings/wedding-rings-and-hands-700.webp" srcset="assets/images/weddings/wedding-rings-and-hands-480.webp 480w, assets/images/weddings/wedding-rings-and-hands-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Detail of the couple&#x27;s hands and wedding rings over a bouquet" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Weddings</span>
-    <span class="work__title">Bands</span>
-    <span class="work__meta">New York · 2025</span>
+</a><a class="frame rv" href="#" data-cat="weddings" data-lightbox="assets/images/weddings/wedding-rings-and-hands-700.webp" data-alt="Detail of the couple&#x27;s hands and wedding rings over a bouquet" data-caption="Bands — Weddings, New York 2025">
+  <span class="frame__n">006</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADwBQCdASoUABkAPulgq08pJSOiMBgIASAdCWgArDNnNwkSW3+Ad+34IB9Rc8WlDpzzbFduTfmQAAD+79IBmeXpG0qdZVfAlgcceaataAhQXaKmJvZ79nRr0Y+i5xnnFgAhNrA4sMbqUl7HDUJSdnB0/AIJmdWWWWqfzBLka7IO4PiyN4UECdlD//Q6ZwyODMHHR8yonoDMf8rjaX9awAAA)"><img src="assets/images/weddings/wedding-rings-and-hands-700.webp" srcset="assets/images/weddings/wedding-rings-and-hands-480.webp 480w, assets/images/weddings/wedding-rings-and-hands-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Detail of the couple&#x27;s hands and wedding rings over a bouquet" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Bands</span>
+    <span class="frame__m">New York · 2025</span>
+    <span class="frame__c">Weddings</span>
   </span>
-</a><a class="work rv" href="#" data-cat="fashion" data-lightbox="assets/images/fashion/cover-fashion-1000.webp" data-alt="Model in a red tulle gown photographed in desert light" data-caption="Crimson — Fashion, Joshua Tree 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAwBQCdASoUABkAPulgqk8pJSOiMBgIASAdCUAXBgIVTymnhxpe1/fATh/imqhPaF9AAAD+8c5nvcu5tzDXBWDQ0C5DW6g2CWf7A9V4TFK/x8n3uhU0G/X93Cc8OYIbYAscVDMM3eA/xzHkhr0hVvDkLFob8VxumZhM+Ci7aQ3fIPQq3DWAuni+NXI2S95LwrLcwXpLGU7GIIaIe2wAAA==)"><img src="assets/images/fashion/cover-fashion-1000.webp" srcset="assets/images/fashion/cover-fashion-480.webp 480w, assets/images/fashion/cover-fashion-700.webp 700w, assets/images/fashion/cover-fashion-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Model in a red tulle gown photographed in desert light" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Fashion</span>
-    <span class="work__title">Crimson</span>
-    <span class="work__meta">Joshua Tree · 2025</span>
+</a><a class="frame rv" href="#" data-cat="fashion" data-lightbox="assets/images/fashion/cover-fashion-1000.webp" data-alt="Model in a red tulle gown photographed in desert light" data-caption="Crimson — Fashion, Joshua Tree 2025">
+  <span class="frame__n">007</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAwBQCdASoUABkAPulgqk8pJSOiMBgIASAdCUAXBgIVTymnhxpe1/fATh/imqhPaF9AAAD+8c5nvcu5tzDXBWDQ0C5DW6g2CWf7A9V4TFK/x8n3uhU0G/X93Cc8OYIbYAscVDMM3eA/xzHkhr0hVvDkLFob8VxumZhM+Ci7aQ3fIPQq3DWAuni+NXI2S95LwrLcwXpLGU7GIIaIe2wAAA==)"><img src="assets/images/fashion/cover-fashion-1000.webp" srcset="assets/images/fashion/cover-fashion-480.webp 480w, assets/images/fashion/cover-fashion-700.webp 700w, assets/images/fashion/cover-fashion-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Model in a red tulle gown photographed in desert light" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Crimson</span>
+    <span class="frame__m">Joshua Tree · 2025</span>
+    <span class="frame__c">Fashion</span>
   </span>
-</a><a class="work rv" href="#" data-cat="fashion" data-lightbox="assets/images/fashion/fashion-duomo-editorial-1000.webp" data-alt="Street-style editorial shot in front of a cathedral facade" data-caption="Duomo — Fashion, Milan 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADwBACdASoUABkAPulmrVApJSQiqAqpIB0JYwCdAA8c3TSwu4+PsgFbz7XsKGvTygAA/t+zl8imh6gfIAVZuPXaAATv/mBHVVriD8fvVttG4jiRWuKizML9PXRb1ydK86QNhj3uI24C29Dxf+8+3kdkHrxQ5Sas2MTF/Ftq7FLrBC+vxnIpSzHlQrd3yfoHexfY4B/HwSu4faJnKrdqydaiET+rPPflAAA=)"><img src="assets/images/fashion/fashion-duomo-editorial-1000.webp" srcset="assets/images/fashion/fashion-duomo-editorial-480.webp 480w, assets/images/fashion/fashion-duomo-editorial-700.webp 700w, assets/images/fashion/fashion-duomo-editorial-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Street-style editorial shot in front of a cathedral facade" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Fashion</span>
-    <span class="work__title">Duomo</span>
-    <span class="work__meta">Milan · 2025</span>
+</a><a class="frame rv" href="#" data-cat="fashion" data-lightbox="assets/images/fashion/fashion-duomo-editorial-1000.webp" data-alt="Street-style editorial shot in front of a cathedral facade" data-caption="Duomo — Fashion, Milan 2025">
+  <span class="frame__n">008</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADwBACdASoUABkAPulmrVApJSQiqAqpIB0JYwCdAA8c3TSwu4+PsgFbz7XsKGvTygAA/t+zl8imh6gfIAVZuPXaAATv/mBHVVriD8fvVttG4jiRWuKizML9PXRb1ydK86QNhj3uI24C29Dxf+8+3kdkHrxQ5Sas2MTF/Ftq7FLrBC+vxnIpSzHlQrd3yfoHexfY4B/HwSu4faJnKrdqydaiET+rPPflAAA=)"><img src="assets/images/fashion/fashion-duomo-editorial-1000.webp" srcset="assets/images/fashion/fashion-duomo-editorial-480.webp 480w, assets/images/fashion/fashion-duomo-editorial-700.webp 700w, assets/images/fashion/fashion-duomo-editorial-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Street-style editorial shot in front of a cathedral facade" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Duomo</span>
+    <span class="frame__m">Milan · 2025</span>
+    <span class="frame__c">Fashion</span>
   </span>
-</a><a class="work rv" href="#" data-cat="fashion" data-lightbox="assets/images/fashion/fashion-sunlit-sportswear-1000.webp" data-alt="Model in a yellow tracksuit on a sunlit basketball court" data-caption="Court — Fashion, Los Angeles 2024">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAQBQCdASoUABkAPulmrk+pJaSiKAqpIB0JaACsLpXf0AQ0B+cRX184l4jDiRbF16AAAP7ezhEbRAfkSV80J1hCbUStkrzqNVJ87PZyzGlDDOZyqtiA7npNprpbsxIsH+8As+dIqI0kDG7zv56zxalu8xVcum/hY20A6V4FE1MgieAZ9ZkBXIuPpAUqBXAFSf8+vnHSZ3aAAAAA)"><img src="assets/images/fashion/fashion-sunlit-sportswear-1000.webp" srcset="assets/images/fashion/fashion-sunlit-sportswear-480.webp 480w, assets/images/fashion/fashion-sunlit-sportswear-700.webp 700w, assets/images/fashion/fashion-sunlit-sportswear-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Model in a yellow tracksuit on a sunlit basketball court" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Fashion</span>
-    <span class="work__title">Court</span>
-    <span class="work__meta">Los Angeles · 2024</span>
+</a><a class="frame rv" href="#" data-cat="fashion" data-lightbox="assets/images/fashion/fashion-sunlit-sportswear-1000.webp" data-alt="Model in a yellow tracksuit on a sunlit basketball court" data-caption="Court — Fashion, Los Angeles 2024">
+  <span class="frame__n">009</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAQBQCdASoUABkAPulmrk+pJaSiKAqpIB0JaACsLpXf0AQ0B+cRX184l4jDiRbF16AAAP7ezhEbRAfkSV80J1hCbUStkrzqNVJ87PZyzGlDDOZyqtiA7npNprpbsxIsH+8As+dIqI0kDG7zv56zxalu8xVcum/hY20A6V4FE1MgieAZ9ZkBXIuPpAUqBXAFSf8+vnHSZ3aAAAAA)"><img src="assets/images/fashion/fashion-sunlit-sportswear-1000.webp" srcset="assets/images/fashion/fashion-sunlit-sportswear-480.webp 480w, assets/images/fashion/fashion-sunlit-sportswear-700.webp 700w, assets/images/fashion/fashion-sunlit-sportswear-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Model in a yellow tracksuit on a sunlit basketball court" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Court</span>
+    <span class="frame__m">Los Angeles · 2024</span>
+    <span class="frame__c">Fashion</span>
   </span>
-</a><a class="work rv" href="#" data-cat="fashion" data-lightbox="assets/images/fashion/fashion-chroma-yellow-700.webp" data-alt="Model in sunglasses against a saturated yellow wall" data-caption="Chroma — Fashion, Lisbon 2024">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADQBACdASoUABkAPuFepE0opSOiMAwBEBwJZgCdACICiDzbaftsYZYlqUiPILTsAAD+0xbhJuisHEjScMs6MBBftQfrv38y1HdUEpfrVqald5QXKvWie/8NR9UWLzyHMNGR4LrSPQwgX1EpBWdp8qcMg45bGoNzycbwoDELg0ffCM7MAZ3Eag2DBktUGhHg1zYznx16rk7PAAAA)"><img src="assets/images/fashion/fashion-chroma-yellow-700.webp" srcset="assets/images/fashion/fashion-chroma-yellow-480.webp 480w, assets/images/fashion/fashion-chroma-yellow-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Model in sunglasses against a saturated yellow wall" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Fashion</span>
-    <span class="work__title">Chroma</span>
-    <span class="work__meta">Lisbon · 2024</span>
+</a><a class="frame rv" href="#" data-cat="fashion" data-lightbox="assets/images/fashion/fashion-chroma-yellow-700.webp" data-alt="Model in sunglasses against a saturated yellow wall" data-caption="Chroma — Fashion, Lisbon 2024">
+  <span class="frame__n">010</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADQBACdASoUABkAPuFepE0opSOiMAwBEBwJZgCdACICiDzbaftsYZYlqUiPILTsAAD+0xbhJuisHEjScMs6MBBftQfrv38y1HdUEpfrVqald5QXKvWie/8NR9UWLzyHMNGR4LrSPQwgX1EpBWdp8qcMg45bGoNzycbwoDELg0ffCM7MAZ3Eag2DBktUGhHg1zYznx16rk7PAAAA)"><img src="assets/images/fashion/fashion-chroma-yellow-700.webp" srcset="assets/images/fashion/fashion-chroma-yellow-480.webp 480w, assets/images/fashion/fashion-chroma-yellow-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Model in sunglasses against a saturated yellow wall" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Chroma</span>
+    <span class="frame__m">Lisbon · 2024</span>
+    <span class="frame__c">Fashion</span>
   </span>
-</a><a class="work rv" href="#" data-cat="fashion" data-lightbox="assets/images/fashion/fashion-neon-nights-1000.webp" data-alt="Model posing under a green neon sign in a studio set" data-caption="Neon Nights — Fashion, Brooklyn 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABQBQCdASoUABkAPulmqU6pJaOiMBgIASAdCWwAnTLQwR+QldjT0rvUvT2ggqsVFSaZOoAA/oePHJQscKd6XF+6yvLcE7zPjJYCnyL7V92ZBF0V/yv/wppop+bS2movtytwMWHg4bkjMC+3G/u1f8p8yFbmFF6zgHkRIaicyTWnBttW9RMX33rnDGkhRg6eb87Qm/AtrfQR2RvVFB9jiCONVXWJXFFlQNdoTQAA)"><img src="assets/images/fashion/fashion-neon-nights-1000.webp" srcset="assets/images/fashion/fashion-neon-nights-480.webp 480w, assets/images/fashion/fashion-neon-nights-700.webp 700w, assets/images/fashion/fashion-neon-nights-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Model posing under a green neon sign in a studio set" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Fashion</span>
-    <span class="work__title">Neon Nights</span>
-    <span class="work__meta">Brooklyn · 2025</span>
+</a><a class="frame rv" href="#" data-cat="fashion" data-lightbox="assets/images/fashion/fashion-neon-nights-1000.webp" data-alt="Model posing under a green neon sign in a studio set" data-caption="Neon Nights — Fashion, Brooklyn 2025">
+  <span class="frame__n">011</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABQBQCdASoUABkAPulmqU6pJaOiMBgIASAdCWwAnTLQwR+QldjT0rvUvT2ggqsVFSaZOoAA/oePHJQscKd6XF+6yvLcE7zPjJYCnyL7V92ZBF0V/yv/wppop+bS2movtytwMWHg4bkjMC+3G/u1f8p8yFbmFF6zgHkRIaicyTWnBttW9RMX33rnDGkhRg6eb87Qm/AtrfQR2RvVFB9jiCONVXWJXFFlQNdoTQAA)"><img src="assets/images/fashion/fashion-neon-nights-1000.webp" srcset="assets/images/fashion/fashion-neon-nights-480.webp 480w, assets/images/fashion/fashion-neon-nights-700.webp 700w, assets/images/fashion/fashion-neon-nights-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Model posing under a green neon sign in a studio set" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Neon Nights</span>
+    <span class="frame__m">Brooklyn · 2025</span>
+    <span class="frame__c">Fashion</span>
   </span>
-</a><a class="work rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/cover-portraits-1000.webp" data-alt="Low-key studio portrait of a man against a black backdrop" data-caption="Low Key No.7 — Portraits, Studio 3 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADQBACdASoUABkAPulgqU8pJSOiMBgIASAdCWUAy6QMbpiyQ4IWFtYZ7zo4/POiwAD+9DLJjSMJbj1tO9pkANaFNgGKMAMinTID3iQxdBXcml2OWO+HaHriIb1dggi9/tKDkQWWSnuGyAAA)"><img src="assets/images/portraits/cover-portraits-1000.webp" srcset="assets/images/portraits/cover-portraits-480.webp 480w, assets/images/portraits/cover-portraits-700.webp 700w, assets/images/portraits/cover-portraits-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Low-key studio portrait of a man against a black backdrop" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Portraits</span>
-    <span class="work__title">Low Key No.7</span>
-    <span class="work__meta">Studio 3 · 2025</span>
+</a><a class="frame rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/cover-portraits-1000.webp" data-alt="Low-key studio portrait of a man against a black backdrop" data-caption="Low Key No.7 — Portraits, Studio 3 2025">
+  <span class="frame__n">012</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADQBACdASoUABkAPulgqU8pJSOiMBgIASAdCWUAy6QMbpiyQ4IWFtYZ7zo4/POiwAD+9DLJjSMJbj1tO9pkANaFNgGKMAMinTID3iQxdBXcml2OWO+HaHriIb1dggi9/tKDkQWWSnuGyAAA)"><img src="assets/images/portraits/cover-portraits-1000.webp" srcset="assets/images/portraits/cover-portraits-480.webp 480w, assets/images/portraits/cover-portraits-700.webp 700w, assets/images/portraits/cover-portraits-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Low-key studio portrait of a man against a black backdrop" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Low Key No.7</span>
+    <span class="frame__m">Studio 3 · 2025</span>
+    <span class="frame__c">Portraits</span>
   </span>
-</a><a class="work rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/portrait-low-key-studio-1000.webp" data-alt="Low-key studio portrait of a woman in sheer black" data-caption="Silhouette — Portraits, Studio 1 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQBACdASoUABkAPulmqE8pJaOtKA1RoB0JYwAALnVZE7Jt75n2QJfa3BsgAP7oxUoosiBu6x4NX/Gsxzj7RCrvr3GuuZ4Q12uoXFMnwqmW7CQ2E3SqQQtTf6pAUAAA)"><img src="assets/images/portraits/portrait-low-key-studio-1000.webp" srcset="assets/images/portraits/portrait-low-key-studio-480.webp 480w, assets/images/portraits/portrait-low-key-studio-700.webp 700w, assets/images/portraits/portrait-low-key-studio-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Low-key studio portrait of a woman in sheer black" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Portraits</span>
-    <span class="work__title">Silhouette</span>
-    <span class="work__meta">Studio 1 · 2025</span>
+</a><a class="frame rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/portrait-low-key-studio-1000.webp" data-alt="Low-key studio portrait of a woman in sheer black" data-caption="Silhouette — Portraits, Studio 1 2025">
+  <span class="frame__n">013</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQBACdASoUABkAPulmqE8pJaOtKA1RoB0JYwAALnVZE7Jt75n2QJfa3BsgAP7oxUoosiBu6x4NX/Gsxzj7RCrvr3GuuZ4Q12uoXFMnwqmW7CQ2E3SqQQtTf6pAUAAA)"><img src="assets/images/portraits/portrait-low-key-studio-1000.webp" srcset="assets/images/portraits/portrait-low-key-studio-480.webp 480w, assets/images/portraits/portrait-low-key-studio-700.webp 700w, assets/images/portraits/portrait-low-key-studio-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Low-key studio portrait of a woman in sheer black" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Silhouette</span>
+    <span class="frame__m">Studio 1 · 2025</span>
+    <span class="frame__c">Portraits</span>
   </span>
-</a><a class="work rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/portrait-rose-ground-1000.webp" data-alt="Beauty portrait of a woman against a dusty rose backdrop" data-caption="Rose Ground — Portraits, Studio 3 2024">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBQCdASoUABkAPulgqk2pJaQiKA1RIB0JYwCnFA5WHsD3kFnAvB4eLb62sia7BnQAAPxdSJwAeMdf7Nkxkh0xITylkM5AOtb8fJuVP6fwtJyFyXYqUblVH6tF3xoMoZ7LL4tw0QMjYClBWy4QAA==)"><img src="assets/images/portraits/portrait-rose-ground-1000.webp" srcset="assets/images/portraits/portrait-rose-ground-480.webp 480w, assets/images/portraits/portrait-rose-ground-700.webp 700w, assets/images/portraits/portrait-rose-ground-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Beauty portrait of a woman against a dusty rose backdrop" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Portraits</span>
-    <span class="work__title">Rose Ground</span>
-    <span class="work__meta">Studio 3 · 2024</span>
+</a><a class="frame rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/portrait-rose-ground-1000.webp" data-alt="Beauty portrait of a woman against a dusty rose backdrop" data-caption="Rose Ground — Portraits, Studio 3 2024">
+  <span class="frame__n">014</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBQCdASoUABkAPulgqk2pJaQiKA1RIB0JYwCnFA5WHsD3kFnAvB4eLb62sia7BnQAAPxdSJwAeMdf7Nkxkh0xITylkM5AOtb8fJuVP6fwtJyFyXYqUblVH6tF3xoMoZ7LL4tw0QMjYClBWy4QAA==)"><img src="assets/images/portraits/portrait-rose-ground-1000.webp" srcset="assets/images/portraits/portrait-rose-ground-480.webp 480w, assets/images/portraits/portrait-rose-ground-700.webp 700w, assets/images/portraits/portrait-rose-ground-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Beauty portrait of a woman against a dusty rose backdrop" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Rose Ground</span>
+    <span class="frame__m">Studio 3 · 2024</span>
+    <span class="frame__c">Portraits</span>
   </span>
-</a><a class="work rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/portrait-gel-study-1000.webp" data-alt="Profile portrait lit with magenta and green gels" data-caption="Gel Study — Portraits, Studio 1 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBQCdASoUABkAPuloqVCpJaOiqAqpIB0JYwC2yAyY5vtNE0j5gigpAg6JQePSw9I+gAD+t5k4UhpM6ycYQks9pszd0F1SNbxXPVL2qD3SOvse+LgVOmiqbpxuy7tgjleNuGARNNVcTtqMVOdIxo+PfKLXp5A59x1GOhPCUObHVxW9qRzIPjwG2AA=)"><img src="assets/images/portraits/portrait-gel-study-1000.webp" srcset="assets/images/portraits/portrait-gel-study-480.webp 480w, assets/images/portraits/portrait-gel-study-700.webp 700w, assets/images/portraits/portrait-gel-study-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Profile portrait lit with magenta and green gels" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Portraits</span>
-    <span class="work__title">Gel Study</span>
-    <span class="work__meta">Studio 1 · 2025</span>
+</a><a class="frame rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/portrait-gel-study-1000.webp" data-alt="Profile portrait lit with magenta and green gels" data-caption="Gel Study — Portraits, Studio 1 2025">
+  <span class="frame__n">015</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBQCdASoUABkAPuloqVCpJaOiqAqpIB0JYwC2yAyY5vtNE0j5gigpAg6JQePSw9I+gAD+t5k4UhpM6ycYQks9pszd0F1SNbxXPVL2qD3SOvse+LgVOmiqbpxuy7tgjleNuGARNNVcTtqMVOdIxo+PfKLXp5A59x1GOhPCUObHVxW9qRzIPjwG2AA=)"><img src="assets/images/portraits/portrait-gel-study-1000.webp" srcset="assets/images/portraits/portrait-gel-study-480.webp 480w, assets/images/portraits/portrait-gel-study-700.webp 700w, assets/images/portraits/portrait-gel-study-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Profile portrait lit with magenta and green gels" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Gel Study</span>
+    <span class="frame__m">Studio 1 · 2025</span>
+    <span class="frame__c">Portraits</span>
   </span>
-</a><a class="work rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/portrait-monochrome-no4-1000.webp" data-alt="Black and white profile portrait of a man with curly hair" data-caption="Monochrome No.4 — Portraits, Studio 3 2024">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoUABkAPulsrlGpJaQiqAgBIB0JaQALAEc7kYU5HOdxSPvQinw0fgIbfNY0n+iAAP7wNq66D1W8/lw1AV0lzl8CV+L9I+rH3V1xYr0ItAy2c9i6XwVZaEZBhn8/0QCDk71BpvSzY+qujkPkNW2PEHHm33AHXWogYI4tZinFT7ps9pipMuXHFegeu2Kls/A/SVFaYQjsD/UEA21vAAAAAA==)"><img src="assets/images/portraits/portrait-monochrome-no4-1000.webp" srcset="assets/images/portraits/portrait-monochrome-no4-480.webp 480w, assets/images/portraits/portrait-monochrome-no4-700.webp 700w, assets/images/portraits/portrait-monochrome-no4-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Black and white profile portrait of a man with curly hair" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Portraits</span>
-    <span class="work__title">Monochrome No.4</span>
-    <span class="work__meta">Studio 3 · 2024</span>
+</a><a class="frame rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/portrait-monochrome-no4-1000.webp" data-alt="Black and white profile portrait of a man with curly hair" data-caption="Monochrome No.4 — Portraits, Studio 3 2024">
+  <span class="frame__n">016</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoUABkAPulsrlGpJaQiqAgBIB0JaQALAEc7kYU5HOdxSPvQinw0fgIbfNY0n+iAAP7wNq66D1W8/lw1AV0lzl8CV+L9I+rH3V1xYr0ItAy2c9i6XwVZaEZBhn8/0QCDk71BpvSzY+qujkPkNW2PEHHm33AHXWogYI4tZinFT7ps9pipMuXHFegeu2Kls/A/SVFaYQjsD/UEA21vAAAAAA==)"><img src="assets/images/portraits/portrait-monochrome-no4-1000.webp" srcset="assets/images/portraits/portrait-monochrome-no4-480.webp 480w, assets/images/portraits/portrait-monochrome-no4-700.webp 700w, assets/images/portraits/portrait-monochrome-no4-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Black and white profile portrait of a man with curly hair" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Monochrome No.4</span>
+    <span class="frame__m">Studio 3 · 2024</span>
+    <span class="frame__c">Portraits</span>
   </span>
-</a><a class="work rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/portrait-blue-hour-1000.webp" data-alt="Portrait of a woman lit with cool blue and violet light" data-caption="Blue Hour — Portraits, Studio 1 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACQBACdASoUABkAPuVYp00pJKOiN/VYASAciWYAsR7fALR053E3EjuKEJR9frQA9wLPWcjuk6hZHl9tnlqa822+K42Cf8A60dfm22lZCbJv/DI5h/rXVh1JY4fZUkm1d4J+jgrS6yBLpCzvo4a4iiKR6ykzUbgtBO/sm+74KgAAAA==)"><img src="assets/images/portraits/portrait-blue-hour-1000.webp" srcset="assets/images/portraits/portrait-blue-hour-480.webp 480w, assets/images/portraits/portrait-blue-hour-700.webp 700w, assets/images/portraits/portrait-blue-hour-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1251" alt="Portrait of a woman lit with cool blue and violet light" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Portraits</span>
-    <span class="work__title">Blue Hour</span>
-    <span class="work__meta">Studio 1 · 2025</span>
+</a><a class="frame rv" href="#" data-cat="portraits" data-lightbox="assets/images/portraits/portrait-blue-hour-1000.webp" data-alt="Portrait of a woman lit with cool blue and violet light" data-caption="Blue Hour — Portraits, Studio 1 2025">
+  <span class="frame__n">017</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACQBACdASoUABkAPuVYp00pJKOiN/VYASAciWYAsR7fALR053E3EjuKEJR9frQA9wLPWcjuk6hZHl9tnlqa822+K42Cf8A60dfm22lZCbJv/DI5h/rXVh1JY4fZUkm1d4J+jgrS6yBLpCzvo4a4iiKR6ykzUbgtBO/sm+74KgAAAA==)"><img src="assets/images/portraits/portrait-blue-hour-1000.webp" srcset="assets/images/portraits/portrait-blue-hour-480.webp 480w, assets/images/portraits/portrait-blue-hour-700.webp 700w, assets/images/portraits/portrait-blue-hour-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1251" alt="Portrait of a woman lit with cool blue and violet light" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Blue Hour</span>
+    <span class="frame__m">Studio 1 · 2025</span>
+    <span class="frame__c">Portraits</span>
   </span>
-</a><a class="work rv" href="#" data-cat="commercial" data-lightbox="assets/images/commercial/cover-commercial-1000.webp" data-alt="Green leather brogue styled on a sculptural pedestal" data-caption="Pedestal — Commercial, Footwear campaign 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwBACdASoUABkAPulaq00pJKQiMBgMASAdCWMAzBw0b9qjb1WV4nLPd0IblSeh3QAA/u1PeRri7JSHtsbSqy7/QihVKbMNE1mzrf1zr0W3F2mAl5Kkn9TeqB26nyNsIi/swUQuDsYTnRB0e3lvx4kAAAA=)"><img src="assets/images/commercial/cover-commercial-1000.webp" srcset="assets/images/commercial/cover-commercial-480.webp 480w, assets/images/commercial/cover-commercial-700.webp 700w, assets/images/commercial/cover-commercial-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Green leather brogue styled on a sculptural pedestal" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Commercial</span>
-    <span class="work__title">Pedestal</span>
-    <span class="work__meta">Footwear campaign · 2025</span>
+</a><a class="frame rv" href="#" data-cat="commercial" data-lightbox="assets/images/commercial/cover-commercial-1000.webp" data-alt="Green leather brogue styled on a sculptural pedestal" data-caption="Pedestal — Commercial, Footwear campaign 2025">
+  <span class="frame__n">018</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwBACdASoUABkAPulaq00pJKQiMBgMASAdCWMAzBw0b9qjb1WV4nLPd0IblSeh3QAA/u1PeRri7JSHtsbSqy7/QihVKbMNE1mzrf1zr0W3F2mAl5Kkn9TeqB26nyNsIi/swUQuDsYTnRB0e3lvx4kAAAA=)"><img src="assets/images/commercial/cover-commercial-1000.webp" srcset="assets/images/commercial/cover-commercial-480.webp 480w, assets/images/commercial/cover-commercial-700.webp 700w, assets/images/commercial/cover-commercial-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Green leather brogue styled on a sculptural pedestal" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Pedestal</span>
+    <span class="frame__m">Footwear campaign · 2025</span>
+    <span class="frame__c">Commercial</span>
   </span>
-</a><a class="work rv" href="#" data-cat="commercial" data-lightbox="assets/images/commercial/commercial-minimal-timepieces-1000.webp" data-alt="Two minimalist watches arranged on a pale grey surface" data-caption="Horology — Commercial, Product series 2024">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoUABkAPulqqlCpJaOiqAqpIB0JaQAALnWYJILWC135F6oAAP7nAwcvoN6TiJHXaQKtipGgIBjm7q1N9nV7zmYV18/WHNMX8rq0iAAA)"><img src="assets/images/commercial/commercial-minimal-timepieces-1000.webp" srcset="assets/images/commercial/commercial-minimal-timepieces-480.webp 480w, assets/images/commercial/commercial-minimal-timepieces-700.webp 700w, assets/images/commercial/commercial-minimal-timepieces-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Two minimalist watches arranged on a pale grey surface" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Commercial</span>
-    <span class="work__title">Horology</span>
-    <span class="work__meta">Product series · 2024</span>
+</a><a class="frame rv" href="#" data-cat="commercial" data-lightbox="assets/images/commercial/commercial-minimal-timepieces-1000.webp" data-alt="Two minimalist watches arranged on a pale grey surface" data-caption="Horology — Commercial, Product series 2024">
+  <span class="frame__n">019</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoUABkAPulqqlCpJaOiqAqpIB0JaQAALnWYJILWC135F6oAAP7nAwcvoN6TiJHXaQKtipGgIBjm7q1N9nV7zmYV18/WHNMX8rq0iAAA)"><img src="assets/images/commercial/commercial-minimal-timepieces-1000.webp" srcset="assets/images/commercial/commercial-minimal-timepieces-480.webp 480w, assets/images/commercial/commercial-minimal-timepieces-700.webp 700w, assets/images/commercial/commercial-minimal-timepieces-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Two minimalist watches arranged on a pale grey surface" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Horology</span>
+    <span class="frame__m">Product series · 2024</span>
+    <span class="frame__c">Commercial</span>
   </span>
-</a><a class="work rv" href="#" data-cat="commercial" data-lightbox="assets/images/commercial/commercial-acoustic-yellow-700.webp" data-alt="Black over-ear headphones floating on a yellow background" data-caption="Acoustic — Commercial, Audio launch 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAADwBQCdASoUABkAPtlaqE0oJSQiMAwBABsJbACdMt1nUJnz/4DyQhp04v1Sz95Qo9qqSZBKveibDgD+6ndinSk4Tr0TTsUBTQaehtYbwwpNTKR63x05oh/4DvFyt+wB8EXOl5L4CQTBFwaAog3v1Lr3JCNx1mzJqgmKcvQq+VZsrN//wjD7VpBNNbzTiXXbsay4HK7Y6GqTYWskZJseSoLh6OaQinYkfyf3/4FnGrtpfbM58y/tT3yDjAAAAA==)"><img src="assets/images/commercial/commercial-acoustic-yellow-700.webp" srcset="assets/images/commercial/commercial-acoustic-yellow-480.webp 480w, assets/images/commercial/commercial-acoustic-yellow-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Black over-ear headphones floating on a yellow background" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Commercial</span>
-    <span class="work__title">Acoustic</span>
-    <span class="work__meta">Audio launch · 2025</span>
+</a><a class="frame rv" href="#" data-cat="commercial" data-lightbox="assets/images/commercial/commercial-acoustic-yellow-700.webp" data-alt="Black over-ear headphones floating on a yellow background" data-caption="Acoustic — Commercial, Audio launch 2025">
+  <span class="frame__n">020</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAADwBQCdASoUABkAPtlaqE0oJSQiMAwBABsJbACdMt1nUJnz/4DyQhp04v1Sz95Qo9qqSZBKveibDgD+6ndinSk4Tr0TTsUBTQaehtYbwwpNTKR63x05oh/4DvFyt+wB8EXOl5L4CQTBFwaAog3v1Lr3JCNx1mzJqgmKcvQq+VZsrN//wjD7VpBNNbzTiXXbsay4HK7Y6GqTYWskZJseSoLh6OaQinYkfyf3/4FnGrtpfbM58y/tT3yDjAAAAA==)"><img src="assets/images/commercial/commercial-acoustic-yellow-700.webp" srcset="assets/images/commercial/commercial-acoustic-yellow-480.webp 480w, assets/images/commercial/commercial-acoustic-yellow-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Black over-ear headphones floating on a yellow background" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Acoustic</span>
+    <span class="frame__m">Audio launch · 2025</span>
+    <span class="frame__c">Commercial</span>
   </span>
-</a><a class="work rv" href="#" data-cat="commercial" data-lightbox="assets/images/commercial/commercial-suspended-form-1000.webp" data-alt="Black running shoe suspended mid-air on white" data-caption="Suspended — Commercial, Performance line 2024">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABwBACdASoUABkAPtFcok0oJaMiN/qoAQAaCWkAAFu1qSqwt0h6v73SscO7AAD+9MtVA68CU8Br0wolwDLbCscOtz0tjnwbZ/26zn+KmwAAAA==)"><img src="assets/images/commercial/commercial-suspended-form-1000.webp" srcset="assets/images/commercial/commercial-suspended-form-480.webp 480w, assets/images/commercial/commercial-suspended-form-700.webp 700w, assets/images/commercial/commercial-suspended-form-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Black running shoe suspended mid-air on white" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Commercial</span>
-    <span class="work__title">Suspended</span>
-    <span class="work__meta">Performance line · 2024</span>
+</a><a class="frame rv" href="#" data-cat="commercial" data-lightbox="assets/images/commercial/commercial-suspended-form-1000.webp" data-alt="Black running shoe suspended mid-air on white" data-caption="Suspended — Commercial, Performance line 2024">
+  <span class="frame__n">021</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABwBACdASoUABkAPtFcok0oJaMiN/qoAQAaCWkAAFu1qSqwt0h6v73SscO7AAD+9MtVA68CU8Br0wolwDLbCscOtz0tjnwbZ/26zn+KmwAAAA==)"><img src="assets/images/commercial/commercial-suspended-form-1000.webp" srcset="assets/images/commercial/commercial-suspended-form-480.webp 480w, assets/images/commercial/commercial-suspended-form-700.webp 700w, assets/images/commercial/commercial-suspended-form-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Black running shoe suspended mid-air on white" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Suspended</span>
+    <span class="frame__m">Performance line · 2024</span>
+    <span class="frame__c">Commercial</span>
   </span>
-</a><a class="work rv" href="#" data-cat="commercial" data-lightbox="assets/images/commercial/commercial-optic-black-1000.webp" data-alt="Black sunglasses photographed as a high-contrast still life" data-caption="Optic — Commercial, Eyewear campaign 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBQCdASoUABkAPulmqk2pJaQiMAgBIB0JaQAAW+tLCpwxE3A/ptRrC5Cqm5ju/1uAAP7vxvfIvFKnmhJNfNp1MgIXaKfCrI0HZzaSB70qSLn1q6e6/qa7IIJeUPPJZxXhXqgdXtFZaN62sxp8jdKGCux4CfNlhWvAiezLUVdw39JDQAAAAA==)"><img src="assets/images/commercial/commercial-optic-black-1000.webp" srcset="assets/images/commercial/commercial-optic-black-480.webp 480w, assets/images/commercial/commercial-optic-black-700.webp 700w, assets/images/commercial/commercial-optic-black-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Black sunglasses photographed as a high-contrast still life" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Commercial</span>
-    <span class="work__title">Optic</span>
-    <span class="work__meta">Eyewear campaign · 2025</span>
+</a><a class="frame rv" href="#" data-cat="commercial" data-lightbox="assets/images/commercial/commercial-optic-black-1000.webp" data-alt="Black sunglasses photographed as a high-contrast still life" data-caption="Optic — Commercial, Eyewear campaign 2025">
+  <span class="frame__n">022</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBQCdASoUABkAPulmqk2pJaQiMAgBIB0JaQAAW+tLCpwxE3A/ptRrC5Cqm5ju/1uAAP7vxvfIvFKnmhJNfNp1MgIXaKfCrI0HZzaSB70qSLn1q6e6/qa7IIJeUPPJZxXhXqgdXtFZaN62sxp8jdKGCux4CfNlhWvAiezLUVdw39JDQAAAAA==)"><img src="assets/images/commercial/commercial-optic-black-1000.webp" srcset="assets/images/commercial/commercial-optic-black-480.webp 480w, assets/images/commercial/commercial-optic-black-700.webp 700w, assets/images/commercial/commercial-optic-black-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Black sunglasses photographed as a high-contrast still life" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Optic</span>
+    <span class="frame__m">Eyewear campaign · 2025</span>
+    <span class="frame__c">Commercial</span>
   </span>
-</a><a class="work rv" href="#" data-cat="events" data-lightbox="assets/images/events/cover-events-700.webp" data-alt="Confetti bursting over a crowd under stage lights" data-caption="Ignition — Events, Festival 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBQCdASoUABkAPulgqU2pJaQiMAgBIB0JZACdMt6+ACmkLejd2aDLuK/zLcgrm8kAAP7u2LmpFeCwL69Fnlux/UrnHWnQDWv/QISLcNMPvtiL1IE6rMAtO20gA5HJukNsxFnhDiw9pv2sYpVhiiiWQfCKWhwanCTahyp3qN/0AAAA)"><img src="assets/images/events/cover-events-700.webp" srcset="assets/images/events/cover-events-480.webp 480w, assets/images/events/cover-events-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Confetti bursting over a crowd under stage lights" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Events</span>
-    <span class="work__title">Ignition</span>
-    <span class="work__meta">Festival · 2025</span>
+</a><a class="frame rv" href="#" data-cat="events" data-lightbox="assets/images/events/cover-events-700.webp" data-alt="Confetti bursting over a crowd under stage lights" data-caption="Ignition — Events, Festival 2025">
+  <span class="frame__n">023</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBQCdASoUABkAPulgqU2pJaQiMAgBIB0JZACdMt6+ACmkLejd2aDLuK/zLcgrm8kAAP7u2LmpFeCwL69Fnlux/UrnHWnQDWv/QISLcNMPvtiL1IE6rMAtO20gA5HJukNsxFnhDiw9pv2sYpVhiiiWQfCKWhwanCTahyp3qN/0AAAA)"><img src="assets/images/events/cover-events-700.webp" srcset="assets/images/events/cover-events-480.webp 480w, assets/images/events/cover-events-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Confetti bursting over a crowd under stage lights" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Ignition</span>
+    <span class="frame__m">Festival · 2025</span>
+    <span class="frame__c">Events</span>
   </span>
-</a><a class="work rv" href="#" data-cat="events" data-lightbox="assets/images/events/event-keynote-700.webp" data-alt="Audience silhouetted in a darkened auditorium" data-caption="Keynote — Events, Summit 2024">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACQBACdASoUABkAPt1cp00opSOiMAwBEBuJZQDHMCHf/uup3///V5YOtA5evwAA/vFgdewOOsAH+P6ccNw4wYQLuzGm/AmzbxWYZt7WASGwe6i5OdLUiu++R2oMpkhq7qgAAA==)"><img src="assets/images/events/event-keynote-700.webp" srcset="assets/images/events/event-keynote-480.webp 480w, assets/images/events/event-keynote-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Audience silhouetted in a darkened auditorium" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Events</span>
-    <span class="work__title">Keynote</span>
-    <span class="work__meta">Summit · 2024</span>
+</a><a class="frame rv" href="#" data-cat="events" data-lightbox="assets/images/events/event-keynote-700.webp" data-alt="Audience silhouetted in a darkened auditorium" data-caption="Keynote — Events, Summit 2024">
+  <span class="frame__n">024</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACQBACdASoUABkAPt1cp00opSOiMAwBEBuJZQDHMCHf/uup3///V5YOtA5evwAA/vFgdewOOsAH+P6ccNw4wYQLuzGm/AmzbxWYZt7WASGwe6i5OdLUiu++R2oMpkhq7qgAAA==)"><img src="assets/images/events/event-keynote-700.webp" srcset="assets/images/events/event-keynote-480.webp 480w, assets/images/events/event-keynote-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Audience silhouetted in a darkened auditorium" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Keynote</span>
+    <span class="frame__m">Summit · 2024</span>
+    <span class="frame__c">Events</span>
   </span>
-</a><a class="work rv" href="#" data-cat="events" data-lightbox="assets/images/events/event-mainstage-1000.webp" data-alt="Crowd bathed in blue and green light at a festival mainstage" data-caption="Mainstage — Events, Music festival 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACwBACdASoUABkAPulkqU6pJaOiKA1RIB0JbACxHyGA6wLs/jUkxpiC38GsjZwAAP6BybjxzfeawJlHfz62MJnYmh9XHzy3by1AXcyhrjjBqb66BTfoV6Lr1guHzFG1fUxNN7akTdCodxlQhmwli4Y+EY5xqYej5x0n1kFnZyBnRkGY0CRIHgqNS35ezlvXZaJyZyAA)"><img src="assets/images/events/event-mainstage-1000.webp" srcset="assets/images/events/event-mainstage-480.webp 480w, assets/images/events/event-mainstage-700.webp 700w, assets/images/events/event-mainstage-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Crowd bathed in blue and green light at a festival mainstage" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Events</span>
-    <span class="work__title">Mainstage</span>
-    <span class="work__meta">Music festival · 2025</span>
+</a><a class="frame rv" href="#" data-cat="events" data-lightbox="assets/images/events/event-mainstage-1000.webp" data-alt="Crowd bathed in blue and green light at a festival mainstage" data-caption="Mainstage — Events, Music festival 2025">
+  <span class="frame__n">025</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACwBACdASoUABkAPulkqU6pJaOiKA1RIB0JbACxHyGA6wLs/jUkxpiC38GsjZwAAP6BybjxzfeawJlHfz62MJnYmh9XHzy3by1AXcyhrjjBqb66BTfoV6Lr1guHzFG1fUxNN7akTdCodxlQhmwli4Y+EY5xqYej5x0n1kFnZyBnRkGY0CRIHgqNS35ezlvXZaJyZyAA)"><img src="assets/images/events/event-mainstage-1000.webp" srcset="assets/images/events/event-mainstage-480.webp 480w, assets/images/events/event-mainstage-700.webp 700w, assets/images/events/event-mainstage-1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1000" height="1250" alt="Crowd bathed in blue and green light at a festival mainstage" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Mainstage</span>
+    <span class="frame__m">Music festival · 2025</span>
+    <span class="frame__c">Events</span>
   </span>
-</a><a class="work rv" href="#" data-cat="events" data-lightbox="assets/images/events/event-the-room-700.webp" data-alt="Guests mingling in a daylit hall before a keynote" data-caption="The Room — Events, Brand launch 2024">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAACwBACdASoUABkAPulepU4pJKMiMBgMASAdCWUAy6QKp/rP+ztwT5QYorrqZqRgAMtBNw6OEmQ6auxc++3gADk7xFhIOZIdyq+i1RAek+T/SYURDEB+ZEgJksSQMJ4btGcjKbsKWPgN5LKi8E0r1pNV+1X0aYcIWrgaBgxm9Kgond0QlaIS2+uwAAA=)"><img src="assets/images/events/event-the-room-700.webp" srcset="assets/images/events/event-the-room-480.webp 480w, assets/images/events/event-the-room-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Guests mingling in a daylit hall before a keynote" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Events</span>
-    <span class="work__title">The Room</span>
-    <span class="work__meta">Brand launch · 2024</span>
+</a><a class="frame rv" href="#" data-cat="events" data-lightbox="assets/images/events/event-the-room-700.webp" data-alt="Guests mingling in a daylit hall before a keynote" data-caption="The Room — Events, Brand launch 2024">
+  <span class="frame__n">026</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAACwBACdASoUABkAPulepU4pJKMiMBgMASAdCWUAy6QKp/rP+ztwT5QYorrqZqRgAMtBNw6OEmQ6auxc++3gADk7xFhIOZIdyq+i1RAek+T/SYURDEB+ZEgJksSQMJ4btGcjKbsKWPgN5LKi8E0r1pNV+1X0aYcIWrgaBgxm9Kgond0QlaIS2+uwAAA=)"><img src="assets/images/events/event-the-room-700.webp" srcset="assets/images/events/event-the-room-480.webp 480w, assets/images/events/event-the-room-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Guests mingling in a daylit hall before a keynote" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">The Room</span>
+    <span class="frame__m">Brand launch · 2024</span>
+    <span class="frame__c">Events</span>
   </span>
-</a><a class="work rv" href="#" data-cat="events" data-lightbox="assets/images/events/event-rooftop-social-700.webp" data-alt="Guests mingling under festoon lights at a rooftop social" data-caption="Rooftop Social — Events, Private party 2025">
-  <div class="media zoom" style="background-image:url(data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADwBACdASoUABkAPuVkpU0pJiMiMBgMASAciWYApxQGPtkIjKDPMGIlQpccWcdLmsAA9VkiztU8amSRH7xkav/o6P3ydjEWBQO1Frqn4pZc9/QgWOMWrXoPDxlTMm7Gos2cNMEQ6Q6TtQJVZGuBp86eHPSWQLSkFZVyUkmfY7lUkCmwONMHui32EWZrm9kq/eTo0kf836NGOAif6h9QO/Uf2pnJqCKMPnZZfKJcAAA=)"><img src="assets/images/events/event-rooftop-social-700.webp" srcset="assets/images/events/event-rooftop-social-480.webp 480w, assets/images/events/event-rooftop-social-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Guests mingling under festoon lights at a rooftop social" loading="lazy" decoding="async"></div>
-  <span class="work__scrim"></span>
-  <span class="work__cap">
-    <span class="work__cat">Events</span>
-    <span class="work__title">Rooftop Social</span>
-    <span class="work__meta">Private party · 2025</span>
+</a><a class="frame rv" href="#" data-cat="events" data-lightbox="assets/images/events/event-rooftop-social-700.webp" data-alt="Guests mingling under festoon lights at a rooftop social" data-caption="Rooftop Social — Events, Private party 2025">
+  <span class="frame__n">027</span>
+  <span class="crop"><span class="media" style="background-image:url(data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADwBACdASoUABkAPuVkpU0pJiMiMBgMASAciWYApxQGPtkIjKDPMGIlQpccWcdLmsAA9VkiztU8amSRH7xkav/o6P3ydjEWBQO1Frqn4pZc9/QgWOMWrXoPDxlTMm7Gos2cNMEQ6Q6TtQJVZGuBp86eHPSWQLSkFZVyUkmfY7lUkCmwONMHui32EWZrm9kq/eTo0kf836NGOAif6h9QO/Uf2pnJqCKMPnZZfKJcAAA=)"><img src="assets/images/events/event-rooftop-social-700.webp" srcset="assets/images/events/event-rooftop-social-480.webp 480w, assets/images/events/event-rooftop-social-700.webp 700w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="700" height="875" alt="Guests mingling under festoon lights at a rooftop social" loading="lazy" decoding="async"></span></span>
+  <span class="frame__cap">
+    <span class="frame__t">Rooftop Social</span>
+    <span class="frame__m">Private party · 2025</span>
+    <span class="frame__c">Events</span>
   </span>
 </a>
     </div>
@@ -269,9 +314,8 @@
   </div>
 </section>
 <section class="cta-band">
-  <img src="assets/images/about/about-on-location-700.webp" srcset="assets/images/about/about-on-location-480.webp 480w, assets/images/about/about-on-location-700.webp 700w" sizes="100vw" width="700" height="875" alt="Photographer lifting a camera into backlit sun" loading="lazy" decoding="async">
-  <div class="cta-band__scrim"></div>
-  <div class="wrap cta-band__in rv">
+  <div class="wrap cta-band__in">
+    <div class="cta-band__text rv">
     <p class="eyebrow">Let's make something</p>
     <h2 class="h1">Your story deserves<br><span class="italic">more than a snapshot.</span></h2>
     <p class="lead" style="margin-top:1.4rem">Tell us the date, the place and the feeling you're after. We'll come back within one working day with availability, a treatment and a fixed quote.</p>
@@ -279,6 +323,8 @@
       <a class="btn btn--solid" href="contact.html">Start an enquiry</a>
       <a class="btn" href="portfolio.html">See the work</a>
     </div>
+    </div>
+    <div class="on-ink rv"><span class="crop"><span class="media"><img src="assets/images/about/about-on-location-700.webp" srcset="assets/images/about/about-on-location-480.webp 480w, assets/images/about/about-on-location-700.webp 700w" sizes="100vw" width="700" height="875" alt="Photographer lifting a camera into backlit sun" loading="lazy" decoding="async"></span></span></div>
   </div>
 </section>
 </main>
