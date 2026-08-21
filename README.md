@@ -68,7 +68,7 @@ Two things to do before going live:
 - **Contact form.** `assets/js/main.js` currently validates and confirms in the browser only.
   Point the `<form>` at your endpoint (Formspree, Netlify Forms, your own handler) and remove
   the `preventDefault` block.
-- **Domain.** Replace `https://www.lumierestudio.com/` in `sitemap.xml` and `robots.txt`, and
+- **Domain.** Replace `https://lumierestudio.example/` in `sitemap.xml` and `robots.txt`, and
   update the studio address, phone and email in the footer and on `contact.html`.
 
 ## Browser support & accessibility

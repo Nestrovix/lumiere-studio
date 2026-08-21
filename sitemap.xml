@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.lumierestudio.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.lumierestudio.com/portfolio.html</loc><priority>0.9</priority></url>
-  <url><loc>https://www.lumierestudio.com/services.html</loc><priority>0.9</priority></url>
-  <url><loc>https://www.lumierestudio.com/gallery.html</loc><priority>0.8</priority></url>
-  <url><loc>https://www.lumierestudio.com/about.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.lumierestudio.com/contact.html</loc><priority>0.8</priority></url>
+  <url><loc>https://lumierestudio.example/</loc><priority>1.0</priority></url>
+  <url><loc>https://lumierestudio.example/portfolio.html</loc><priority>0.9</priority></url>
+  <url><loc>https://lumierestudio.example/services.html</loc><priority>0.9</priority></url>
+  <url><loc>https://lumierestudio.example/gallery.html</loc><priority>0.8</priority></url>
+  <url><loc>https://lumierestudio.example/about.html</loc><priority>0.7</priority></url>
+  <url><loc>https://lumierestudio.example/contact.html</loc><priority>0.8</priority></url>
 </urlset>
