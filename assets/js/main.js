@@ -58,69 +58,98 @@
     });
   }
 
-  /* ---------- film strip: manual scroll always, slow drift unless reduced motion ---------- */
-  var rail = document.querySelector('[data-strip]');
-  if (rail) {
-    var drifting = false, paused = false, raf = null, last = 0, cloned = false, pos = 0;
+  /* ---------- home hero: the projected frame ----------
+     Six frames stacked in one stage. The incoming layer fades in ON TOP of the
+     outgoing one and the outgoing one is only dropped once the fade has finished,
+     so the stage is never blank between frames. A frame is never shown before its
+     image has actually decoded. */
+  var stage = document.querySelector('[data-proj-frames]');
+  if (stage) {
+    var frames = Array.prototype.slice.call(stage.querySelectorAll('.proj__frame'));
+    var thumbs = Array.prototype.slice.call(document.querySelectorAll('[data-proj-go]'));
+    var numEl = document.querySelector('[data-proj-num]');
+    var slugEl = document.querySelector('[data-proj-slug]');
+    var catEl = document.querySelector('[data-proj-cat]');
+    var modeBtn = document.querySelector('[data-proj-mode]');
+    var liveEl = document.querySelector('[data-proj-live]');
+    var HOLD = 7000, FADE = 900;
+    var cur = 0, timer = null, fadeT = null, auto = !reduce;
 
-    function halfWidth() { return rail.scrollWidth / 2; }
-
-    function startDrift() {
-      if (drifting || reduce) return;
-      if (window.innerWidth < 820) return;            /* no drift on small screens */
-      if (rail.scrollWidth <= rail.clientWidth + 4) return;
-      if (!cloned) {
-        Array.prototype.slice.call(rail.children).forEach(function (node) {
-          var c = node.cloneNode(true);
-          c.setAttribute('aria-hidden', 'true');
-          c.querySelectorAll('img').forEach(function (im) { im.setAttribute('loading', 'lazy'); });
-          rail.appendChild(c);
-        });
-        cloned = true;
-        initImages(rail);
-      }
-      drifting = true;
-      last = 0;
-      pos = rail.scrollLeft;
-      raf = requestAnimationFrame(step);
+    function ready(i) {
+      var img = frames[i] && frames[i].querySelector('img');
+      return !!(img && img.complete && img.naturalWidth > 0);
     }
-    function stopDrift() {
-      drifting = false;
-      if (raf) cancelAnimationFrame(raf);
-      raf = null;
+    function warm(i) {
+      var img = frames[i] && frames[i].querySelector('img');
+      if (!img) return;
+      if (img.getAttribute('loading') === 'lazy') img.setAttribute('loading', 'eager');
+      if (img.decode) img.decode().catch(function () {});
     }
-    function pause() { paused = true; }
-    function resume() { paused = false; pos = rail.scrollLeft; }
-    /* sub-pixel drift is accumulated in JS: scrollLeft alone rounds it away */
-    function step(ts) {
-      if (!drifting) return;
-      if (!last) last = ts;
-      var dt = Math.min(ts - last, 50);
-      last = ts;
-      if (!paused && !document.hidden) {
-        var h = halfWidth();
-        pos += dt * 0.03;
-        if (pos >= h) pos -= h;
-        rail.scrollLeft = pos;
-      }
-      raf = requestAnimationFrame(step);
-    }
-    ['pointerenter', 'pointerdown', 'focusin', 'touchstart', 'wheel'].forEach(function (ev) {
-      rail.addEventListener(ev, pause, { passive: true });
-    });
-    ['pointerleave', 'focusout'].forEach(function (ev) {
-      rail.addEventListener(ev, resume, { passive: true });
-    });
-    rail.addEventListener('touchend', function () { setTimeout(resume, 1500); }, { passive: true });
-    rail.addEventListener('scroll', function () { if (paused) pos = rail.scrollLeft; }, { passive: true });
-    if (typeof reduceQuery.addEventListener === 'function') {
-      reduceQuery.addEventListener('change', function (e) {
-        reduce = e.matches;
-        if (reduce) stopDrift(); else startDrift();
+    function slate(i) {
+      var f = frames[i];
+      if (numEl) numEl.textContent = f.getAttribute('data-num') || '';
+      if (slugEl) slugEl.textContent = f.getAttribute('data-slug') || '';
+      if (catEl) catEl.textContent = f.getAttribute('data-cat') || '';
+      thumbs.forEach(function (b, j) {
+        b.classList.toggle('is-on', j === i);
+        if (j === i) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
       });
     }
-    window.addEventListener('load', startDrift);
-    startDrift();
+    function show(i, announce) {
+      if (i === cur || !frames[i]) return;
+      if (!ready(i)) { warm(i); return; }           /* never fade to a frame that has not loaded */
+      var next = frames[i], prev = frames[cur];
+      next.style.zIndex = '2';
+      next.classList.add('is-on');
+      cur = i;
+      slate(i);
+      clearTimeout(fadeT);
+      fadeT = setTimeout(function () {
+        if (prev !== next) { prev.classList.remove('is-on'); prev.style.zIndex = '0'; }
+        next.style.zIndex = '1';
+      }, reduce ? 20 : FADE + 60);
+      warm((i + 1) % frames.length);
+      if (announce && liveEl) {
+        liveEl.textContent = 'Frame ' + next.getAttribute('data-num') + ', ' +
+          next.getAttribute('data-slug') + ', ' + next.getAttribute('data-cat');
+      }
+    }
+    function advance() {
+      for (var k = 1; k <= frames.length; k++) {
+        var j = (cur + k) % frames.length;
+        if (ready(j)) { show(j); return; }
+        warm(j);
+      }
+    }
+    function setAuto(on) {
+      auto = on && !reduce;
+      clearInterval(timer);
+      timer = null;
+      if (auto) timer = setInterval(function () { if (!document.hidden) advance(); }, HOLD);
+      if (modeBtn) {
+        modeBtn.textContent = reduce ? 'Manual' : (auto ? 'Auto' : 'Paused');
+        modeBtn.setAttribute('aria-pressed', auto ? 'false' : 'true');
+      }
+    }
+
+    thumbs.forEach(function (b) {
+      b.addEventListener('click', function () {
+        setAuto(false);                              /* clicking a frame pauses the auto-advance */
+        show(parseInt(b.getAttribute('data-proj-go'), 10), true);
+      });
+    });
+    if (modeBtn) {
+      if (reduce) { modeBtn.disabled = true; }
+      else modeBtn.addEventListener('click', function () { setAuto(!auto); });
+    }
+    if (typeof reduceQuery.addEventListener === 'function') {
+      reduceQuery.addEventListener('change', function (e) { reduce = e.matches; setAuto(!reduce); });
+    }
+
+    slate(0);
+    setAuto(true);
+    warm(1);
+    window.addEventListener('load', function () { frames.forEach(function (f, i) { if (i) warm(i); }); });
   }
 
   /* ---------- filters (gallery + portfolio contact sheet) ---------- */

@@ -45,9 +45,6 @@ h1,h2,h3,h4{
   font-family:var(--display);font-weight:700;line-height:.85;margin:0;
   letter-spacing:-.012em;text-transform:lowercase;
 }
-.h-display{
-  font-weight:800;font-size:clamp(3.5rem,17.5vw,15.9rem);line-height:.74;letter-spacing:-.022em;
-}
 .h1{font-size:clamp(2.98rem,9.05vw,7.35rem);line-height:.77;letter-spacing:-.02em;font-weight:800}
 .h2{font-size:clamp(2.48rem,5.7vw,4.7rem);line-height:.8;letter-spacing:-.018em;font-weight:800}
 .h3{font-size:clamp(1.65rem,2.67vw,2.35rem);letter-spacing:-.014em}
@@ -68,7 +65,7 @@ p{margin:0 0 1.05em}
    Commissioner's .192em), so the old .12em word-spacing is halved to keep
    the gap between tracked words the same width it was */
 .eyebrow,.btn,.link-u,.nav a,.brand__sub,.crumbs,.filters button,
-.frame__c,.frame__m,.strip__foot,.series__n,.series__y,.series__c,
+.frame__c,.frame__m,.proj__slate,.proj__cat,.proj__reellabel,.series__n,.series__y,.series__c,
 .svc__n,.svc__price,.stat__l,.step__n,.member__r,.quote__r,.lb__cap,
 .field label,.info-item h4,.footer-col h4,.footer-bot,.marquee__t,.mobile-nav .meta{
   word-spacing:.06em;
@@ -205,42 +202,128 @@ body.menu-open .mobile-nav{opacity:1;visibility:visible}
 .mobile-nav .meta{margin-top:2rem;font-family:var(--ui);font-size:.67rem;font-weight:500;letter-spacing:.09em;color:var(--grey-ink);text-transform:uppercase}
 @media (max-width:1040px){.nav,.header-cta{display:none}.burger{display:flex}}
 
-/* ---------- reel (home hero) ---------- */
-.reel{padding-top:clamp(2rem,5vw,4.5rem)}
-.reel__word{padding-left:var(--pad);padding-right:var(--pad)}
-@media (min-width:640px){.reel__word{padding-left:clamp(.5rem,1.2vw,1.1rem)}}
-.reel__word .h-display{margin:0}
-.reel__meta{
-  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.6rem 3rem;align-items:end;
-  padding-block:clamp(1.6rem,3vw,2.6rem);
+/* ---------- projected frame (home hero) ----------
+   One photograph at full height. The frames cross-fade by stacking: the incoming
+   layer fades in ON TOP of the outgoing one, which only drops out once the fade is
+   done — so the stage is never blank, half-lit or half-loaded between frames. */
+.proj{background:var(--ink);color:var(--paper)}
+.proj__stage{
+  position:relative;overflow:hidden;background:var(--ink);
+  min-height:min(calc(100svh - clamp(60px,6vw,76px)),980px);
+  display:flex;
 }
-.reel__meta .lead{max-width:59ch;margin:0}
-.reel__actions{display:flex;gap:.7rem;flex-wrap:wrap}
-@media (max-width:820px){.reel__meta{grid-template-columns:1fr;align-items:start}}
+.proj__frames{position:absolute;inset:0;z-index:0}
+.proj__frame{position:absolute;inset:0;opacity:0;z-index:0;transition:opacity .9s var(--ease)}
+.proj__frame.is-on{opacity:1}
+.proj__frame>img{width:100%;height:100%;object-fit:cover;background:var(--ink-2)}
+@media (prefers-reduced-motion:reduce){.proj__frame{transition:none}}
 
-/* ---------- film strip ---------- */
-.strip{background:var(--ink);color:var(--paper);border-block:1px solid var(--ink);position:relative}
-.strip__perf{height:9px;background:repeating-linear-gradient(90deg,rgba(237,237,235,.26) 0 13px,transparent 13px 30px);margin-inline:0}
-.strip__rail{
-  display:flex;gap:clamp(.7rem,1.4vw,1.35rem);
-  overflow-x:auto;overscroll-behavior-x:contain;
-  padding:clamp(1.1rem,2vw,1.7rem) var(--pad);
-  scrollbar-width:thin;scrollbar-color:var(--grey) transparent;
-  max-width:100%;
+/* scrim: the type sits in the bottom band, which never drops below 92% ink so
+   body copy over any photograph clears 4.5:1 */
+.proj__scrim{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(to top,rgba(10,10,10,.96) 0,rgba(10,10,10,.93) 24.5rem,rgba(10,10,10,.5) 31rem,rgba(10,10,10,0) 40rem),
+    linear-gradient(to bottom,rgba(10,10,10,.5) 0,rgba(10,10,10,.22) 3.5rem,rgba(10,10,10,0) 8rem),
+    linear-gradient(to right,rgba(10,10,10,.36) 0%,rgba(10,10,10,0) 46%);
 }
-.strip__rail::-webkit-scrollbar{height:6px}
-.strip__rail::-webkit-scrollbar-track{background:transparent}
-.strip__rail::-webkit-scrollbar-thumb{background:var(--grey)}
-.strip__rail:focus-visible{outline:2px solid var(--paper);outline-offset:-4px}
-.strip__frame{flex:0 0 auto;width:clamp(200px,23vw,330px)}
-.strip__frame .media{aspect-ratio:3/2;background-color:var(--ink-2)}
-.strip__foot{
-  display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;
-  padding:0 var(--pad) clamp(.9rem,1.6vw,1.3rem);
-  font-family:var(--ui);font-size:.63rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);
+
+.proj__ui{
+  position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:space-between;
+  gap:clamp(2rem,6vw,4rem);width:100%;max-width:var(--maxw);margin-inline:auto;
+  padding:clamp(1rem,2.2vw,1.9rem) var(--pad) clamp(1.2rem,2.4vw,2rem);
 }
-.strip__hint{display:inline-flex;align-items:center;gap:.6rem}
-.strip__hint i{display:block;width:2.2rem;height:1px;background:var(--grey);font-style:normal}
+
+/* slate: frame number · caption slug · shoot category */
+.proj__top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem 2rem}
+/* slate chips: an opaque ground so the marks clear 4.5:1 over any frame,
+   including the ones shot on white */
+.proj__slate,.proj__cat{
+  margin:0;font-family:var(--ui);font-size:.63rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--paper);display:flex;align-items:center;gap:.7rem;
+  background:rgba(10,10,10,.9);padding:.42rem .8rem;
+}
+.proj__slate b{font-weight:600;font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+.proj__slate span{color:rgba(237,237,235,.88);letter-spacing:.1em;text-transform:none;font-size:.66rem}
+.proj__slate::before,.proj__cat::after{content:"";width:1.6rem;height:1px;background:rgba(237,237,235,.55);flex:none}
+
+.proj__bottom{display:grid;grid-template-columns:minmax(0,42rem) minmax(0,1fr);gap:1.6rem clamp(1.5rem,3vw,3rem);align-items:end}
+.proj__cap{min-width:0}
+.proj__cap .eyebrow{color:var(--paper);margin-bottom:.85rem}
+.proj__cap .eyebrow::before{background:rgba(237,237,235,.55)}
+.proj__brand{
+  margin:0;font-family:var(--display);font-weight:800;text-transform:lowercase;letter-spacing:-.024em;
+  font-size:clamp(1.45rem,2.1vw,1.9rem);line-height:.9;color:var(--paper);
+}
+.proj__h{
+  margin:.45rem 0 0;font-family:var(--display);font-weight:800;text-transform:lowercase;
+  font-size:clamp(2.5rem,5.4vw,4.35rem);line-height:.84;letter-spacing:-.022em;color:var(--paper);
+}
+.proj__h .italic{color:rgba(237,237,235,.72)}
+.proj__cap .lead{margin:1.1rem 0 0;max-width:56ch;color:var(--paper)}
+.proj__actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+.proj .btn{border-color:var(--paper);color:var(--paper)}
+.proj .btn:hover{background:var(--paper);color:var(--ink)}
+.proj .btn--solid{background:var(--paper);color:var(--ink)}
+.proj .btn--solid:hover{background:transparent;color:var(--paper)}
+.proj :focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+
+/* filmstrip along the bottom edge */
+.proj__reel{min-width:0;justify-self:end;max-width:100%}
+.proj__reelhead{display:flex;align-items:center;justify-content:flex-end;gap:1rem;margin-bottom:.6rem}
+.proj__reellabel{
+  margin:0;font-family:var(--ui);font-size:.61rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(237,237,235,.86);
+}
+.proj__mode{
+  font-family:var(--ui);font-size:.61rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--paper);border:1px solid rgba(237,237,235,.45);padding:.3rem .7rem;line-height:1.3;
+  display:inline-flex;align-items:center;gap:.5rem;
+}
+.proj__mode::before{content:"";width:6px;height:6px;background:var(--paper);flex:none}
+.proj__mode[aria-pressed="true"]::before{background:transparent;box-shadow:inset 0 0 0 1px var(--paper)}
+.proj__mode:hover:not([disabled]){background:var(--paper);color:var(--ink)}
+.proj__mode:hover:not([disabled])::before{background:var(--ink)}
+.proj__mode[disabled]{cursor:default;opacity:.75}
+.proj__strip{
+  list-style:none;margin:0;padding:0 0 .35rem;display:flex;gap:.5rem;
+  overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--grey) transparent;
+}
+.proj__strip::-webkit-scrollbar{height:4px}
+.proj__strip::-webkit-scrollbar-thumb{background:var(--grey)}
+.proj__thumb{
+  position:relative;display:block;flex:0 0 auto;width:clamp(58px,5vw,74px);padding:0;
+  border:1px solid rgba(237,237,235,.34);background:var(--ink-2);
+  transition:border-color .2s linear,opacity .2s linear;opacity:.62;
+}
+.proj__thumb>img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.proj__thumbn{
+  position:absolute;left:0;bottom:0;right:0;padding:.2rem .3rem;
+  font-family:var(--ui);font-size:.55rem;font-weight:600;letter-spacing:.1em;
+  font-variant-numeric:tabular-nums;color:var(--paper);background:rgba(10,10,10,.92);text-align:center;
+}
+.proj__thumb:hover,.proj__thumb:focus-visible{opacity:1;border-color:var(--paper)}
+.proj__thumb.is-on{opacity:1;border-color:var(--paper);box-shadow:inset 0 0 0 2px var(--ink),inset 0 0 0 3px var(--paper)}
+@media (prefers-reduced-motion:reduce){.proj__thumb{transition:none}}
+
+@media (max-width:1040px){
+  /* stacked layout puts the caption higher up the frame, so the reading band
+     has to reach further before body copy drops under 4.5:1 */
+  .proj__scrim{background:
+    linear-gradient(to top,rgba(10,10,10,.96) 0,rgba(10,10,10,.93) 26rem,rgba(10,10,10,.62) 34rem,rgba(10,10,10,0) 44rem),
+    linear-gradient(to bottom,rgba(10,10,10,.5) 0,rgba(10,10,10,.22) 3.5rem,rgba(10,10,10,0) 8rem);}
+  .proj__bottom{grid-template-columns:minmax(0,1fr);align-items:start}
+  .proj__reel{width:100%;justify-self:stretch}
+  .proj__reelhead{justify-content:space-between}
+}
+@media (max-width:640px){
+  .proj__stage{min-height:min(calc(100svh - clamp(60px,6vw,76px)),820px)}
+  .proj__cap .lead{font-size:.88rem}
+  .proj__slate span{display:none}
+}
+
+/* visually hidden (live region) */
+.vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 
 /* ---------- masthead (inner pages) ---------- */
 .masthead{padding-top:clamp(2rem,4.5vw,4rem);padding-bottom:clamp(1.6rem,3vw,2.6rem)}

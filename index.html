@@ -14,6 +14,7 @@
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/darker-grotesque-latin-800-normal.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/epilogue-latin-400-normal.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/epilogue-latin-500-normal.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/images/hero/hero-golden-hour-vows-1400.webp" imagesrcset="assets/images/hero/hero-golden-hour-vows-900.webp 900w, assets/images/hero/hero-golden-hour-vows-1400.webp 1400w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body data-page="home">
@@ -34,65 +35,69 @@
   <div class="meta">hello@lumierestudio.example · +1 000 000 0000</div>
 </nav>
 <main id="main">
-<section class="reel">
-  <div class="wrap">
-    <p class="eyebrow">New York · Est. 2012</p>
-  </div>
-  <div class="reel__word">
-    <h1 class="h-display">Light, held<br><span class="italic">a little longer.</span></h1>
-  </div>
-  <div class="wrap reel__meta">
-    <p class="lead">An editorial photography studio making unhurried, cinematic pictures of real people — weddings, fashion, portraiture, commercial campaigns and events.</p>
-    <div class="reel__actions">
-      <a class="btn btn--solid" href="portfolio.html">View portfolio</a>
-      <a class="btn" href="contact.html">Book a session</a>
+<!-- HOME HERO — the projected frame -->
+<section class="proj" aria-label="Studio reel">
+  <div class="proj__stage">
+
+    <div class="proj__frames" data-proj-frames>
+      <div class="proj__frame is-on" data-num="012" data-slug="golden-hour-vows" data-cat="Weddings" style="z-index:1">
+        <img src="assets/images/hero/hero-golden-hour-vows-1400.webp" srcset="assets/images/hero/hero-golden-hour-vows-900.webp 900w, assets/images/hero/hero-golden-hour-vows-1400.webp 1400w" sizes="100vw" width="1400" height="787" alt="Bride backlit by golden evening sun, holding a bouquet" fetchpriority="high" loading="eager" decoding="async">
+      </div>
+      <div class="proj__frame" data-num="027" data-slug="duomo-editorial" data-cat="Fashion">
+        <img style="object-position:50% 30%" src="assets/images/fashion/fashion-duomo-editorial-1000.webp" srcset="assets/images/fashion/fashion-duomo-editorial-480.webp 480w, assets/images/fashion/fashion-duomo-editorial-700.webp 700w, assets/images/fashion/fashion-duomo-editorial-1000.webp 1000w" sizes="100vw" width="1000" height="1250" alt="Street-style editorial shot in front of a cathedral facade" loading="lazy" decoding="async">
+      </div>
+      <div class="proj__frame" data-num="041" data-slug="low-key-studio" data-cat="Portraiture">
+        <img style="object-position:50% 26%" src="assets/images/portraits/portrait-low-key-studio-1000.webp" srcset="assets/images/portraits/portrait-low-key-studio-480.webp 480w, assets/images/portraits/portrait-low-key-studio-700.webp 700w, assets/images/portraits/portrait-low-key-studio-1000.webp 1000w" sizes="100vw" width="1000" height="1250" alt="Low-key studio portrait of a woman in sheer black" loading="lazy" decoding="async">
+      </div>
+      <div class="proj__frame" data-num="058" data-slug="suspended-form" data-cat="Commercial">
+        <img style="object-position:50% 44%" src="assets/images/commercial/commercial-suspended-form-1000.webp" srcset="assets/images/commercial/commercial-suspended-form-480.webp 480w, assets/images/commercial/commercial-suspended-form-700.webp 700w, assets/images/commercial/commercial-suspended-form-1000.webp 1000w" sizes="100vw" width="1000" height="1250" alt="Black running shoe suspended mid-air on white" loading="lazy" decoding="async">
+      </div>
+      <div class="proj__frame" data-num="074" data-slug="candlelit-toast" data-cat="Events">
+        <img src="assets/images/hero/hero-candlelit-toast-1400.webp" srcset="assets/images/hero/hero-candlelit-toast-900.webp 900w, assets/images/hero/hero-candlelit-toast-1400.webp 1400w" sizes="100vw" width="1400" height="787" alt="Guests raising glasses in a warm candlelit toast" loading="lazy" decoding="async">
+      </div>
+      <div class="proj__frame" data-num="093" data-slug="editorial-street" data-cat="Editorial">
+        <img src="assets/images/hero/hero-editorial-street-1400.webp" srcset="assets/images/hero/hero-editorial-street-900.webp 900w, assets/images/hero/hero-editorial-street-1400.webp 1400w" sizes="100vw" width="1400" height="787" alt="Fashion editorial: model in a burgundy coat with shopping bags" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <div class="proj__scrim" aria-hidden="true"></div>
+
+    <div class="proj__ui">
+      <div class="proj__top">
+        <p class="proj__slate"><b data-proj-num>012</b><span data-proj-slug>golden-hour-vows</span></p>
+        <p class="proj__cat" data-proj-cat>Weddings</p>
+      </div>
+
+      <div class="proj__bottom">
+        <div class="proj__cap">
+          <p class="eyebrow">New York · Est. 2012</p>
+          <p class="proj__brand">Lumière Studio</p>
+          <h1 class="proj__h">Light, held<br><span class="italic">a little longer.</span></h1>
+          <p class="lead">An editorial photography studio making unhurried, cinematic pictures of real people — weddings, fashion, portraiture, commercial campaigns and events.</p>
+          <div class="proj__actions">
+            <a class="btn btn--solid" href="portfolio.html">View portfolio</a>
+            <a class="btn" href="contact.html">Book a session</a>
+          </div>
+        </div>
+
+        <div class="proj__reel">
+          <div class="proj__reelhead">
+            <p class="proj__reellabel" id="proj-reel-label">Roll 001 · 006 frames</p>
+            <button type="button" class="proj__mode" data-proj-mode aria-pressed="false">Auto</button>
+          </div>
+          <ul class="proj__strip" data-proj-strip aria-labelledby="proj-reel-label">
+            <li><button type="button" class="proj__thumb is-on" data-proj-go="0" aria-current="true" aria-label="Show frame 012 — golden-hour-vows, Weddings"><img src="assets/images/hero/hero-golden-hour-vows-900.webp" alt="" width="900" height="506" loading="eager" decoding="async"><span class="proj__thumbn">012</span></button></li>
+            <li><button type="button" class="proj__thumb" data-proj-go="1" aria-label="Show frame 027 — duomo-editorial, Fashion"><img src="assets/images/fashion/fashion-duomo-editorial-480.webp" alt="" width="480" height="600" loading="eager" decoding="async"><span class="proj__thumbn">027</span></button></li>
+            <li><button type="button" class="proj__thumb" data-proj-go="2" aria-label="Show frame 041 — low-key-studio, Portraiture"><img src="assets/images/portraits/portrait-low-key-studio-480.webp" alt="" width="480" height="600" loading="eager" decoding="async"><span class="proj__thumbn">041</span></button></li>
+            <li><button type="button" class="proj__thumb" data-proj-go="3" aria-label="Show frame 058 — suspended-form, Commercial"><img src="assets/images/commercial/commercial-suspended-form-480.webp" alt="" width="480" height="600" loading="eager" decoding="async"><span class="proj__thumbn">058</span></button></li>
+            <li><button type="button" class="proj__thumb" data-proj-go="4" aria-label="Show frame 074 — candlelit-toast, Events"><img src="assets/images/hero/hero-candlelit-toast-900.webp" alt="" width="900" height="506" loading="eager" decoding="async"><span class="proj__thumbn">074</span></button></li>
+            <li><button type="button" class="proj__thumb" data-proj-go="5" aria-label="Show frame 093 — editorial-street, Editorial"><img src="assets/images/hero/hero-editorial-street-900.webp" alt="" width="900" height="506" loading="eager" decoding="async"><span class="proj__thumbn">093</span></button></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="strip on-ink">
-    <div class="strip__perf" aria-hidden="true"></div>
-    <div class="strip__rail" data-strip tabindex="0" role="group" aria-label="Contact sheet — recent frames">
-      <figure class="strip__frame frame">
-        <span class="frame__n">001</span>
-        <span class="crop"><span class="media"><img src="assets/images/hero/hero-golden-hour-vows-1400.webp" srcset="assets/images/hero/hero-golden-hour-vows-900.webp 900w, assets/images/hero/hero-golden-hour-vows-1400.webp 1400w" sizes="(max-width:640px) 60vw, 330px" width="1400" height="787" alt="Bride backlit by golden evening sun, holding a bouquet" loading="eager" decoding="sync"></span></span>
-      </figure>
-      <figure class="strip__frame frame">
-        <span class="frame__n">002</span>
-        <span class="crop"><span class="media"><img src="assets/images/weddings/cover-weddings-1000.webp" srcset="assets/images/weddings/cover-weddings-480.webp 480w, assets/images/weddings/cover-weddings-700.webp 700w, assets/images/weddings/cover-weddings-1000.webp 1000w" sizes="(max-width:640px) 60vw, 330px" width="1000" height="1250" alt="Bride and groom on a pebble beach, veil trailing in the wind" loading="eager" decoding="sync"></span></span>
-      </figure>
-      <figure class="strip__frame frame">
-        <span class="frame__n">003</span>
-        <span class="crop"><span class="media"><img src="assets/images/hero/hero-editorial-street-1400.webp" srcset="assets/images/hero/hero-editorial-street-900.webp 900w, assets/images/hero/hero-editorial-street-1400.webp 1400w" sizes="(max-width:640px) 60vw, 330px" width="1400" height="787" alt="Fashion editorial: model in a burgundy coat with shopping bags" loading="eager" decoding="sync"></span></span>
-      </figure>
-      <figure class="strip__frame frame">
-        <span class="frame__n">004</span>
-        <span class="crop"><span class="media"><img src="assets/images/fashion/cover-fashion-1000.webp" srcset="assets/images/fashion/cover-fashion-480.webp 480w, assets/images/fashion/cover-fashion-700.webp 700w, assets/images/fashion/cover-fashion-1000.webp 1000w" sizes="(max-width:640px) 60vw, 330px" width="1000" height="1250" alt="Model in a red tulle gown photographed in desert light" loading="lazy" decoding="async"></span></span>
-      </figure>
-      <figure class="strip__frame frame">
-        <span class="frame__n">005</span>
-        <span class="crop"><span class="media"><img src="assets/images/hero/hero-candlelit-toast-1400.webp" srcset="assets/images/hero/hero-candlelit-toast-900.webp 900w, assets/images/hero/hero-candlelit-toast-1400.webp 1400w" sizes="(max-width:640px) 60vw, 330px" width="1400" height="787" alt="Guests raising glasses in a warm candlelit toast" loading="lazy" decoding="async"></span></span>
-      </figure>
-      <figure class="strip__frame frame">
-        <span class="frame__n">006</span>
-        <span class="crop"><span class="media"><img src="assets/images/portraits/cover-portraits-1000.webp" srcset="assets/images/portraits/cover-portraits-480.webp 480w, assets/images/portraits/cover-portraits-700.webp 700w, assets/images/portraits/cover-portraits-1000.webp 1000w" sizes="(max-width:640px) 60vw, 330px" width="1000" height="1250" alt="Low-key studio portrait of a man against a black backdrop" loading="lazy" decoding="async"></span></span>
-      </figure>
-      <figure class="strip__frame frame">
-        <span class="frame__n">007</span>
-        <span class="crop"><span class="media"><img src="assets/images/hero/hero-cinema-lens-1400.webp" srcset="assets/images/hero/hero-cinema-lens-900.webp 900w, assets/images/hero/hero-cinema-lens-1400.webp 1400w" sizes="(max-width:640px) 60vw, 330px" width="1400" height="788" alt="Cinema prime lens catching a rim of studio light" loading="lazy" decoding="async"></span></span>
-      </figure>
-      <figure class="strip__frame frame">
-        <span class="frame__n">008</span>
-        <span class="crop"><span class="media"><img src="assets/images/commercial/cover-commercial-1000.webp" srcset="assets/images/commercial/cover-commercial-480.webp 480w, assets/images/commercial/cover-commercial-700.webp 700w, assets/images/commercial/cover-commercial-1000.webp 1000w" sizes="(max-width:640px) 60vw, 330px" width="1000" height="1250" alt="Green leather brogue styled on a sculptural pedestal" loading="lazy" decoding="async"></span></span>
-      </figure>
-      <figure class="strip__frame frame">
-        <span class="frame__n">009</span>
-        <span class="crop"><span class="media"><img src="assets/images/events/cover-events-700.webp" srcset="assets/images/events/cover-events-480.webp 480w, assets/images/events/cover-events-700.webp 700w" sizes="(max-width:640px) 60vw, 330px" width="700" height="875" alt="Confetti bursting over a crowd under stage lights" loading="lazy" decoding="async"></span></span>
-      </figure>
-    </div>
-    <div class="strip__foot">
-      <span class="strip__hint"><i aria-hidden="true"></i> Scroll</span>
-      <span>Roll 001 · 009 frames</span>
-    </div>
-  </div>
+  <p class="vh" aria-live="polite" data-proj-live></p>
 </section>
 
 <div class="marquee" aria-hidden="true">
