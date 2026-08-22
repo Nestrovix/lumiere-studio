@@ -29,7 +29,7 @@ python3 -m http.server 8000     # then visit http://localhost:8000
 └── assets/
     ├── css/main.css        design system + all page styles
     ├── css/fonts.css       self-hosted @font-face rules
-    ├── fonts/              Bricolage Grotesque + Commissioner (latin woff2)
+    ├── fonts/              Darker Grotesque + Epilogue (latin woff2)
     ├── js/main.js          slideshow, reveals, filters, lightbox, menu, form
     ├── favicon.svg
     └── images/
